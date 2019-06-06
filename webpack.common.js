@@ -1,0 +1,127 @@
+const path = require('path'),
+		MiniCssExtractPlugin = require("mini-css-extract-plugin"),
+      	CopyWebpackPlugin = require('copy-webpack-plugin'),
+      	HtmlWebpackPlugin = require('html-webpack-plugin'),
+		fs = require('fs'),
+		StyleLintPlugin = require('stylelint-webpack-plugin'),
+		htmlPlugins = generateHtmlPlugins('./src/html/views');
+
+function generateHtmlPlugins(templateDir) {
+  	const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
+  	return templateFiles.map(item => {
+		const parts = item.split('.'),
+				name = parts[0],
+				extension = parts[1];
+		return new HtmlWebpackPlugin({
+			filename: `${name}.html`,
+			template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
+			inject: false,
+		});
+  	});
+}
+
+module.exports = {
+	entry: [
+		'./src/js/index.js',
+		'./src/scss/style.scss'
+	],
+	output: {
+		filename: './js/bundle.js'
+	},
+	module: {
+		rules: [{
+			test: /\.js$/,
+			include: path.resolve(__dirname, 'src/js'),
+			use: [{
+				loader: 'babel-loader',
+				options: {
+					presets: [
+					['@babel/preset-env', {
+						modules: false
+					}],
+					],
+					plugins: ['@babel/plugin-proposal-class-properties'],
+				}
+			},
+			{
+				loader: 'eslint-loader',
+			}]
+		},
+		{
+			test: /\.(sass|scss)$/,
+			include: path.resolve(__dirname, 'src/scss'),
+			use: [{
+				loader: MiniCssExtractPlugin.loader,
+				options: {}
+			},
+			{
+				loader: "css-loader",
+				options: {
+				sourceMap: true,
+				url: false
+				}
+			},
+			{
+				loader: 'postcss-loader',
+				options: {
+				ident: 'postcss',
+				sourceMap: true,
+				plugins: () => [
+					require('autoprefixer'),
+					require('postcss-short'),
+					require('postcss-flexbugs-fixes'),
+					require('postcss-inline-svg'),
+					require('cssnano')({
+					preset: ['default', {
+						discardComments: {
+						removeAll: true,
+						},
+					}]
+					}),
+					require('precss')
+				]
+				}
+			},
+			]
+		},
+		{
+			test: /\.html$/,
+			include: path.resolve(__dirname, 'src/html/includes'),
+			use: [{
+				loader: 'raw-loader',
+				options: {}
+			}
+			]
+		},
+		]
+	},
+	plugins: [
+		new MiniCssExtractPlugin({
+			filename: "./css/style.bundle.css"
+		}),
+		new StyleLintPlugin({
+			configFile: '.stylelintrc',
+			context: 'src/scss',
+			files: '**/*.scss',
+			failOnError: false,
+      		quiet: false,
+		}),
+		new CopyWebpackPlugin([{
+				from: './src/fonts',
+				to: './fonts'
+			},
+			{
+				from: './src/favicon',
+				to: './favicon'
+			},
+			{
+				from: './src/img',
+				to: './img'
+			},
+			{
+				from: './src/uploads',
+				to: './uploads'
+			}
+		]),
+	].concat(htmlPlugins)
+};

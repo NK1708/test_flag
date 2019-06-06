@@ -1,0 +1,175 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature", 
+            "country": "Россия",
+            "countryId": "1",  
+            "city": "Екатеринбург",
+            "cityId": "1",
+            "officeName": "Лучший",
+            "fullName": "Зубенко Михаил Петрович",
+            "phone1": "8-800-555-35-35",
+            "phone2": "6-666-666",
+            "mail": "ekb@wge.ru",
+            "id": 0, 
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [56.842806, 60.584026]
+            }
+        },
+        {
+            "type": "Feature", 
+            "country": "Россия",
+            "countryId": "1",  
+            "city": "Екатеринбург",
+            "cityId": "1",
+            "officeName": "Высоцкий",
+            "fullName": "Екбшный Игорь Валентинович",
+            "phone1": "1111-111",
+            "phone2": "8-906-123-123-1",
+            "mail": "ekb2@wge.ru",
+            "id": 1, 
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [56.822527, 60.626101]
+            }
+        },
+        {
+            "type": "Feature", 
+            "country": "Россия",
+            "countryId": "1",  
+            "city": "Москва",
+            "cityId": "2",
+            "officeName": "Москва-Сити",
+            "fullName": "Московский Соловей Разбойник",
+            "phone1": "567-3124-3",
+            "phone2": "8-545-545-545-32",
+            "mail": "msc@wge.ru",
+            "id": 2, 
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [55.780890, 37.480971]
+            }
+        },
+        {
+            "type": "Feature", 
+            "country": "Россия",
+            "countryId": "1",  
+            "city": "Краснодар",
+            "cityId": "3",
+            "officeName": "КРСНДР офис",
+            "fullName": "Краснодарский Павел Иванович",
+            "phone1": "8-973-22-545-31",
+            "phone2": "456-789",
+            "mail": "krasnodar@wge.ru",
+            "id": 3, 
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [45.087307, 39.004128]
+            }
+        },
+        {
+            "type": "Feature", 
+            "country": "Россия",
+            "countryId": "1",  
+            "city": "Краснодар",
+            "cityId": "3",
+            "officeName": "Пифагор",
+            "fullName": "Краснодарский Олег Константинович",
+            "phone1": "8-434-55-555-55",
+            "phone2": "3-323-323",
+            "mail": "krasnodar2@wge.ru",
+            "id": 4, 
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [45.093626, 38.930676]
+            }
+        },
+        {
+            "type": "Feature", 
+            "country": "Белоруссия",
+            "countryId": "2",  
+            "city": "Минск",
+            "cityId": "4",
+            "officeName": "Минский",
+            "fullName": "Крокодил Михаил Петрович",
+            "phone1": "8-800ппк-555-35-35",
+            "phone2": "8-8034423-555",
+            "mail": "3125fe@wge.ru",
+            "id": 5, 
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [53.899344, 27.446352]
+            }
+        },
+        {
+            "type": "Feature", 
+            "country": "Белоруссия",
+            "countryId": "2",  
+            "city": "Минск",
+            "cityId": "4",
+            "officeName": "Олимп",
+            "fullName": "Греков Зевс Кронович",
+            "phone1": "8-4234-5555-351-35",
+            "phone2": "8-5555544",
+            "mail": "123fe@wge.ru",
+            "id": 6, 
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [53.889814, 27.540082]
+            }
+        },
+        {
+            "type": "Feature", 
+            "country": "Белоруссия",
+            "countryId": "2",  
+            "city": "Борисов",
+            "cityId": "5",
+            "officeName": "БАТЭ",
+            "fullName": "Супер Марио Баллотеллевич",
+            "phone1": "8-4234-5555-351-35",
+            "phone2": "8-5555544",
+            "mail": "12543fe@wge.ru",
+            "id": 7, 
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [54.227873, 28.493075]
+            }
+        },
+        {
+            "type": "Feature", 
+            "country": "Белоруссия",
+            "countryId": "2",  
+            "city": "Борисов",
+            "cityId": "5",
+            "officeName": "Суперофис",
+            "fullName": "Мюнхен Арьен Роббенович",
+            "phone1": "8-5555555",
+            "phone2": "8-13123123",
+            "mail": "sert546g@wge.ru",
+            "id": 8, 
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [54.216126, 28.515705]
+            }
+        },
+        {
+            "type": "Feature", 
+            "country": "Белоруссия",
+            "countryId": "2",  
+            "city": "Бобруйск",
+            "cityId": "6",
+            "officeName": "Potato-City",
+            "fullName": "Иванов Иван Иванович",
+            "phone1": "32323-323-3",
+            "phone2": "1-111-111",
+            "mail": "bobruyskg@wge.ru",
+            "id": 9, 
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [53.144381, 29.160973]
+            }
+        }
+    ]
+} 

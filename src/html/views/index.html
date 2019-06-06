@@ -1,0 +1,33 @@
+<% var data = {
+  title: "Главная"
+}; %>
+<%= _.template(require('./../includes/header.html'))(data) %>
+
+<div class="content">
+
+  <div class="panel">
+		<div class="panel__tabs panel-tabs">
+			<div class="panel-tabs__item is-active" data-tab-name="tab-1" data-country-id="1">Россия</div>
+			<div class="panel-tabs__item" data-tab-name="tab-2" data-country-id="2">Белоруссия</div>
+		</div>
+		<div class="panel__content">
+			<div class="panel__item is-active tab-1" id="tab-1">
+
+        <!-- <div class="panel__block">
+          <button class="panel__open">Section 1</button>
+          <div class="panel__info">
+            <p>Lorem ipsum...321</p>
+          </div>
+        </div> -->
+        
+      </div>
+			<div class="panel__item tab-2" id="tab-2"></div>
+    </div>
+	</div>
+
+  <div class="map" id="map"></div>
+</div>
+
+
+
+<%= _.template(require('./../includes/footer.html'))(data) %>
