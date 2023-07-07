@@ -45,7 +45,7 @@
     "postcss-short": "^5.0.0",
     "precss": "^4.0.0",
     "raw-loader": "^0.5.1",
-    "stylelint": "^10.0.1",
+    "stylelint": "^15.10.1",
     "stylelint-webpack-plugin": "^0.10.5",
     "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.20.2",
